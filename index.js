@@ -10,7 +10,7 @@ var express = require('express'),
 var app = express();
 	app.use(bodyParser.json()); 
 
-mongoose.connect('mongodb://localhost:27017/FoodOrdering');
+mongoose.connect('mongodb://ds153719.mlab.com:53719/foodordering');
 var db = mongoose.connection;
 
 db.once('open', function(err){
