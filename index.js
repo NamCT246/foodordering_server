@@ -54,3 +54,7 @@ router.route('/signup').post(users.signup);
 //         res.redirect('/verification')
 //     }
 // }
+
+router.route('/test').post(function(req, res){
+    return res.status(200).send({"connected": true});
+});
