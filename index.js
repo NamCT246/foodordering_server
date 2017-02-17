@@ -9,6 +9,9 @@ var express = require('express'),
 
 var app = express();
 	app.use(bodyParser);
+    app.use(bodyParser.urlencoded({
+    extended: true
+}));
 
 mongoose.connect('mongodb://localhost:27017/FoodOrdering');
 var db = mongoose.connection;
