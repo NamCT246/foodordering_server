@@ -8,10 +8,7 @@ var express = require('express'),
 	// mongoStore = require('connect-mongo')({session: expressSession});
 
 var app = express();
-	app.use(bodyParser);
-    app.use(bodyParser.urlencoded({
-    extended: true
-}));
+	app.use(bodyParser.json()); 
 
 mongoose.connect('mongodb://localhost:27017/FoodOrdering');
 var db = mongoose.connection;
