@@ -58,3 +58,7 @@ router.route('/signup').post(users.signup);
 router.route('/test').post(function(req, res){
     return res.status(200).send({"connected": true});
 });
+
+app.get('/', function(req, res){
+    res.send("hello");
+})
